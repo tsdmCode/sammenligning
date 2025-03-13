@@ -24,4 +24,6 @@ if ((A == E && A < B) || (C == D && B != D)) {
 //opgave 4: Skriv en If then statement der kan finde ud af om F er "undefined" eller har en værdi, ved at bruge !.
 if (!F) {
   console.log('4 if true');
+} else {
+  console.log('4 if false');
 }

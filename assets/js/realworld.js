@@ -1,7 +1,7 @@
-/* du må både ændre koden her, og i din HTML, hvis det er nødvendigt.. */
+/* Du må både ændre koden her, og i din HTML, hvis det er nødvendigt.. */
 
-/*Opgave 1: skriv en validering af svar i koden herunder. resultatet skal vises i myAnswerFeedbackElement når bruger trykker på myAnswerButton .
-der et korrekte svar:
+/*Opgave 1: Skriv en validering af svar i koden herunder. Resultatet skal vises i myAnswerFeedbackElement når bruger trykker på myAnswerButton.
+Der er et korrekt svar:
 nej 
 */
 
@@ -11,7 +11,7 @@ const myAnswerFeedbackElement = document.getElementById('answerFeedback');
 
 // myAnsverButton.addEventListener('click', (e) => {
 //   e.preventDefault();
-//   /* din kode her. Skriv en alert der skriver "du har svaret rigtigt" hvis svaret er true
+//   /* Din kode her. Skriv en alert der skriver "du har svaret rigtigt" hvis svaret er true
 //   og "du har svaret forkert" hvis svaret er false*/
 //   let myAnswer = myAnsverInput.value;
 
@@ -26,7 +26,7 @@ const myAnswerFeedbackElement = document.getElementById('answerFeedback');
 //   console.log('Answer is: ' + myAnswer);
 // });
 
-/*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
+/*Opgave 2: Udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
 nej
 ja i disney film
 */
@@ -34,7 +34,7 @@ ja i disney film
 myAnswerButton.addEventListener('click', (e) => {
   e.preventDefault();
 
-  let myAnswer = myAnswerInput.value;
+  const myAnswer = myAnswerInput.value;
 
   switch (myAnswer) {
     case 'nej':
@@ -48,6 +48,7 @@ myAnswerButton.addEventListener('click', (e) => {
     case 'ja':
       alert('Du har svaret forkert!');
       myAnswerFeedbackElement.innerHTML = 'Forkert, din idiot!';
+      break;
     default:
       myAnswerFeedbackElement.innerHTML = "Wait, that's illegal!";
       break;
@@ -78,10 +79,11 @@ function validateName() {
 
   if (nameLength.length > 3) {
     navn.style.border = '3px solid green';
-    return true;
   } else {
-    navn.style.border = '1px solid #eee';
+    navn.style.border = 'revert';
   }
+
+  return nameLength.length > 3;
 }
 
 function validateAge() {

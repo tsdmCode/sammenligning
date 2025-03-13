@@ -27,7 +27,7 @@ if (B === C) {
 }
 
 //opgave 5: Skriv en If then statement der bliver TRUE når du sammenligner B og C.
-if (B !== C) {
+if (B == C) {
   console.log('True');
 }
 
